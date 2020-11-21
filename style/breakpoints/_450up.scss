@@ -1,0 +1,41 @@
+// ビューポートの幅が450px以上629px以下の場合のスタイル調整
+
+ .mobile-menu {
+   &__btn {
+       & > span {
+           width: 25px;
+           height: 3px;
+           margin-bottom: 6px;
+       }
+   }
+ }
+
+ .content-width {
+   width: 90%;
+ }
+
+.icons{
+   &__item {
+      width: 35%;
+   }
+}
+
+.contact {
+   &__btn {
+      padding: 10vw 0;
+   }
+   &__forms {
+      &__form {
+         width: 80%;
+      }
+   }
+}
+
+.under {
+   &__img {
+      height: 130vw;
+   }
+   &::after {
+      height: 130vw;
+   }
+}

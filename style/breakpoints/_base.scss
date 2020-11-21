@@ -1,0 +1,476 @@
+// ページ各セクションにおける スタイル設定のメインCSS
+
+@import '../modules/base-fonts'; // フォント設定をインポート
+@import '../modules/base-obj';  // オブジェクト形状設定をインポート
+@import '../modules/base-effects';  // アニメーション効果設定をインポート
+@import '../modules/base-fadein';  // フェードイン調整設定をインポート
+
+html{
+   font-size: 62.5%;
+}
+
+body {
+   font-size: 1.6rem; margin: 0; padding: 0;
+   font-family: 'Kameron', 'Noto Sans JP', sans-serif;
+}
+
+.flex {
+   display: flex;
+}
+
+// ロゴの大きさを設定
+.logo {
+   @extend .logo-text;
+   &__img {
+      width: calc(1.8rem + ((1vw - 0.45rem) * 2));
+      vertical-align: middle;
+   }
+}
+
+//  全てのフェードインの対象の監視を起動
+#global-container {
+   @extend .general-fadeIn;
+   @extend .copy-fadeIn;
+   @extend .txt-fadeIn;
+   @extend .border-fadein;
+   @extend .icon-jump;
+   @extend .back-to-top;
+}
+
+// *****************************
+
+#container {  // mobile menuオープン時のコンテナ動作速度
+   position: relative;
+   background-color: #fff;
+   z-index: 5;
+   transition: all 0.3s;
+}
+
+// *************** ヘッダーのスタイル *****************
+
+.header {
+   position: fixed;
+   z-index: 50;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height:$navHeight;
+   color: $cWhite;   
+   &__back-film{
+      position: absolute;
+      z-index: 20;
+      background-color: rgba(80, 80, 80, 0);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height:$navHeight;
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+      &.enter{
+         transform: translateY(0);
+         background-color: rgba(80, 80, 80, 0.6);
+      }
+   }
+   & .logo {
+      padding-left: $headerPd;
+   }
+   & .mobile-menu__btn{
+      padding-right: $headerPd;
+   }
+   &__inner{
+      position: absolute;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      @extend .content-width;
+      width: 100%;
+      left: 0;
+      right: 0;
+      padding-top: 3vh;
+      vertical-align: middle;
+      @extend .general-fadeIn;
+   }
+   &__menu {
+      padding-right: $headerPd;
+      display: none;
+      &__icons{
+         list-style: none;
+         @extend .flex;
+         @extend .icon-size;
+
+         & .fab,
+         & .fas {
+            @extend .icon-before-hover;
+            &:hover {
+               @extend .icon-hover;
+            }
+         }
+      }
+   }
+}
+
+// *************** トップのスタイル *****************
+
+#main-content {
+   position: relative;
+   z-index: 0;
+ }
+
+
+.top {
+   height: 100vh;
+   overflow: hidden;
+}
+
+// *************** 「これまでの感染者数の推移」 セクションのスタイル *****************
+.chart{
+   background-color: $cBgYellow;
+   &__inner {
+      @extend .content-width;
+      @extend .inner;    
+   }
+   &__title {
+      @extend .title;
+   }
+   &__graph {
+      padding: 25px 0;
+      
+      & .ct-chart {
+         max-width: 100%;
+         max-height: 70vh;
+      }     
+   }     
+}
+
+// *************** 「ワクチンの普及状況」 セクションのスタイル *****************
+.vaccine{
+   background-color: $cBgGray;
+   &__inner {
+      @extend .content-width;
+      @extend .inner;
+      @extend .inner-height;
+      overflow: hidden;
+   }
+   &__title {
+      @extend .title;
+   }
+   &__img {
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+      &::after {
+         @extend .black-film;
+         @extend .film-before-hover;
+     }
+      & img {
+         vertical-align: bottom;
+         @extend .img;
+      }
+      &:hover {
+         .vaccine__sub {
+            @extend .sub-hover;
+         }      
+      }
+      &:hover::after {
+         @extend .film-hover;
+      }  
+   }
+   &__sub {
+      position: absolute;
+      z-index: 50;
+      color: $cWhite;
+      top: 25%;
+      left: 0;
+      width: 100%;
+      @extend .sub-before-hover;
+      & h2 {
+         margin: 0 auto;
+         padding: calc(2rem + ((1vw - 0.45rem) * 10.6667));
+      }
+      &-pt1 {
+         display: block;
+      }
+      &-pt2 {
+         display: none;
+      }
+      &__btn {
+         &:hover {
+            @extend .btn-hover;
+         }
+         &:active {
+            @extend .btn-active;
+         }
+      }
+   }
+} 
+
+// *************** 「感染拡大の予防のためにできること」 セクションのスタイル *****************
+.icons{
+   &__inner {
+      @extend .content-width;
+      @extend .inner;
+      height: auto;
+      padding: 5vh 0;
+   }
+   &__title {
+      @extend .title-sm;
+   }
+   &__items {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-evenly;
+      padding: 25px 0px;      
+   }
+   &__item {     
+      padding: 2vh;
+      cursor: pointer;
+      width: 30%;
+      height: 30%;
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 241, 211, 0);
+      transition: background 0.5s, color 0s;
+      
+      &:hover {
+         /*ボタン を ホバーしたときの透明度をなくす*/
+         background: rgb(255, 241, 211);
+         border: 2px dotted rgb(255, 212, 120);
+         box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5);
+      }
+   }
+}
+
+// *************** 「CHECK YOUR DAILY HABIT」 セクションのスタイル *****************
+.habit{
+   background-color: $cBgYellow;
+   &__inner {
+      @extend .content-width;
+      @extend .inner;
+      height: auto;
+   }
+   &__title {
+      @extend .title;
+   }
+   &__items {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-evenly;
+      padding: 20px 0px;
+   }
+   &__item {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &:hover {
+         .habit__sub{
+            @extend .sub-hover;
+         }
+      }
+   }
+   &__img{    
+      vertical-align: bottom;
+      width: 100%;
+   }
+   &__sub {      
+      position: absolute;
+      z-index: 50;
+      color: $cWhite;
+      top: 25%;
+      left: 0;
+      width: 100%;
+      @extend .sub-before-hover;
+      & > p {
+         padding: 2rem;
+      }
+      &__btn {
+         max-width: 18rem;
+         &:hover {
+            @extend .btn-hover;
+         }
+         &:active {
+            @extend .btn-active;
+         }
+      }
+   }   
+}
+
+// *************** 「お問い合わせ」 セクションのスタイル *****************
+.contact {
+   background-color: $cBgGray;
+   &__inner {
+      @extend .content-width;
+      @extend .inner;
+      height: auto;
+   }
+   &__title {
+      @extend .title-sm;
+   }
+   &__items {     
+      position: relative;
+   }
+   &__forms {
+      width: 100%;
+      padding-top: 13vh;
+      @extend .general-fadeIn;
+      &__label{
+         @extend .pt-sm;
+         width: 70%;
+         max-width: 800px;  
+         text-align: center;
+         margin: 0 auto;
+         text-align: left;
+         & > p {
+            padding-bottom: 5px;
+         }
+      }
+      &__form {
+         height: 30px;
+         width: 100%;       
+
+         &.wideForm {
+            height: 200px;
+            width: 100%;
+         }
+      }
+   }
+   &__btn {
+      @extend .general-fadeIn;
+      padding: 70px 0;
+      width: 100%;
+      & .btn{
+         // width: 200px;
+         height: 50px;
+         &:hover {
+            @extend .btn-hover;
+         }
+         &:active {
+            @extend .btn-active;
+         }    
+      }
+   }
+}
+
+// 「よくあるお問い合わせ一覧」プルダウンメニューのスタイル
+.contact__list{
+   list-style-type: none;
+   margin: 0 auto;
+   padding: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 100;
+   & img {
+      display: inline;
+      width: 4vh;
+   }
+   &__txt {
+      display: inline;
+      text-align: center;
+   }
+   & li a{
+     display: block;
+     color: $cBlack;
+     @extend h3;
+     font-weight: bold;
+     padding: 3vh 4vw;
+     line-height: 3.5;
+     text-decoration: none;
+   }
+   & li ul{
+     list-style: none;
+     top: 100%;
+     left: 0;
+     margin: 0;
+     padding: 0;
+   }
+   & li:last-child ul{
+     width: 100%
+   }
+   & li ul li{
+     overflow: hidden;
+     width: 100%;
+     height: 0;
+     color: #fff;
+     transition: .3s ease;
+   }
+   & li ul li a{ 
+     text-align: center;
+     @extend .font-sm;
+     background: $cBgDarkGray;
+     font-weight: normal;
+   }
+   & li:hover > a{
+     background: $cBgDarkGray;
+     color: #fff;
+   }
+   & li:hover ul li{
+     overflow: visible;
+     height: 10vh;
+     border-bottom: 1px solid #fff;
+   }
+ }
+
+ // *************** 「マスクから解放された生活を取り戻そう」 セクションのスタイル *****************
+.under {
+   position: relative;
+   overflow: hidden;
+   &::after {
+      @extend .black-film;
+   }
+   &__img {
+      position: absolute;
+      z-index: 10;
+      object-fit: cover;
+      height: 180vw;
+      @extend .img;
+   }
+   &__inner {
+      @extend .content-width;
+      height: 180vw;
+      max-height: 800px; 
+      overflow: hidden;
+   }
+   &__title {
+      position: absolute;
+      z-index: 50;
+      color: $cWhite;
+      top: 55%;
+      left: 50vw;
+   }
+}
+
+// *************** 最下部 フッターのスタイル *****************
+.footer {
+   &__inner{
+      height: auto;
+      @extend .content-width;
+      @extend .inner;
+      @extend .pb-sm;
+   }
+   &__description {
+      @extend .flex;
+      flex-direction: column; 
+      @extend .pt-lg;
+   }
+   & .copyright {
+      @extend .pt-lg;
+      @extend .pb-sm;
+      font-weight: 600;
+   }
+}
+
+
+ // トップへ戻る 矢印マークのスタイル
+.to-top {
+   opacity: 0;
+   position: fixed;
+   bottom: 1vh;
+   right: 3vw;
+   & img {
+      width: 8vw;
+   }
+}

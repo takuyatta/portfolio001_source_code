@@ -1,0 +1,89 @@
+// ページトップに表示される カルーセルのスタイル・アニメーション設定
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    height: 110vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    
+    & > img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        transition: transform 1.9s ease;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110vh;
+        background-color: $cCover;
+    }
+    &-active{
+        & > img {
+            transform: none;
+        }
+        & .hero__title {
+            transform: translate(-50%,-50%);
+            opacity: 1;
+        }
+    }
+}
+
+// キャッチコピーは2種類あり、画面サイズによって表示を切り替える
+.hero__title.pt1,
+.hero__title.pt2 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+// カルーセルに表示されるキャッチコピーのアニメーション設定
+.swiper-slide-active > .hero {
+    overflow: hidden;
+    @extend .pb-lg;
+
+    &__title {
+        position: absolute;
+        width: 90%;
+        top: 60%;
+        left: 62%;
+        transform: translate(-50%, -50%);
+        color: $cWhite;
+        text-align: center;
+        z-index: 2;
+        opacity: 0;
+        transition: all 0.9s ease 0.1s;
+        @include animation(
+            $name: my-moveUp,
+            $duration: 1.8s,
+            $timing-function: ease-in-out,
+            $fill-mode: forwards
+            );
+        @keyframes my-moveUp {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, 0%);
+            }
+            60% {
+                opacity: 0.5;
+                transform: translate(-50%, -50%);           
+            }            
+            100% {
+                opacity: 0.9;
+                transform: translate(-50%, calc(-50% + 5px));
+            }
+        }
+        &.pt1 {
+            visibility: visible;
+        }
+    }
+}

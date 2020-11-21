@@ -1,0 +1,85 @@
+// 全てのブラウザでの規格を一度リセットする
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// 各モジュールのCSSをインポートする
+
+@import "modules/variables"; // 配色など設定変数
+@import "modules/mixin"; // アニメーションのデフォルト設定
+@import "modules/image-slide"; // 画像のスライドアニメーションの詳細設定
+@import "modules/hero-slider"; // トップのカルーセルの設定
+@import "modules/mobile-menu"; // ハンバーガーメニューのモバイルメニュー設定
+
+
+@import "breakpoints/base";
+
+@media (max-width: 449px){
+  @import "breakpoints/under449";
+}
+@media (min-width: 450px){
+   @import "breakpoints/450up";
+ }
+
+ @media (min-width: 630px){
+   @import "breakpoints/630up";
+ }
+
+ @media (min-width: 860px){
+   @import "breakpoints/860up";
+ }
+
+ @media (min-width: 1020px){
+   @import "breakpoints/1020up";
+ }
+
+ @media (min-width: 1220px){
+   @import "breakpoints/1220up";
+ }
+
+ @media (min-resolution: 192dpi),  //Retinaディスプレイ（アップルの超高解像度ディスプレイのこと）のための仕様
+      (-webkit-min-device-pixel-ratio: 2){
+      @media(min-width: 2000px){   // 高解像度 かつ 2000px以上のウィンドウに絞る  （例）4096x2160 でチェック
+          @import "breakpoints/2x";
+      }
+}

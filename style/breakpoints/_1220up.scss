@@ -1,0 +1,55 @@
+// ビューポートの幅が1220px以上 Retinaディスプレイ以下の場合のスタイル調整
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3.3rem;
+}
+h3 {
+  font-size: 3rem;
+}
+p {
+  font-size: 2.5rem;
+}
+.btn {
+  font-size: 2.5rem;
+}
+.logo-text {
+  font-size: 2.7rem;
+}
+.icon-size {
+  font-size: 2rem;
+}
+.font-sm {
+  font-size: 2.2rem;
+}
+
+.menu-icon{
+  padding-left: 70px;
+}
+
+
+.vaccine {
+  &__sub {
+    & h2 {
+      padding-bottom: 10rem;
+    }
+     &__btn {
+        width: 30rem;
+     }
+  }
+}
+
+.under {
+  &__title {
+    top: 60%;
+    left: 52vw;
+  }
+  &__img {
+    height: 79vw;
+  }
+  &::after {
+    height: 85vw;
+ }
+}

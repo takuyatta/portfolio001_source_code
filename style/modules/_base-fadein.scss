@@ -1,0 +1,190 @@
+
+// スクロールによって 'inview' クラスが付く要素に対する、フェードインアニメーションの設定
+
+// 画像など汎用のフェードイン
+.general-fadeIn {
+   & .observe-gen.inview {
+      @include animation(
+         $name: general-moveUp,
+         $duration: 1s,
+         $delay: 0.5s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards
+       );
+      @keyframes general-moveUp {
+         0% {
+           opacity: 0;
+           transform: translateY(4vh);
+         }
+         70% {
+            opacity: 0.7;
+            transform: translateY(-1vh);
+          }
+         100% {
+           opacity: 1;
+           transform: translateY(0);
+         }
+       }
+   }
+}
+
+// キャッチコピー用のフェードイン
+.copy-fadeIn {
+   & .observe-copy.inview {
+      @include animation(
+         $name: copy-moveUp,
+         $duration: 1.5s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards
+      );
+      @keyframes copy-moveUp {
+         0% {
+         opacity: 0;
+         transform: translateY(5vh);
+         }
+         70% {
+         opacity: 0.8;
+         transform: translateY(-1vh);
+         }
+         100% {
+         opacity: 1;
+         transform: translateY(0);
+         }
+      }
+   }  
+}
+
+// タイトルテキスト用のフェードイン
+.txt-fadeIn {
+   & .observe-txt.inview {
+      @include animation(
+         $name: txt-moveUp,
+         $duration: 1.4s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards
+      );
+      @keyframes txt-moveUp {
+         0% {
+            opacity: 0;
+            transform: translateY(5vh);
+         }
+         70% {
+            opacity: 0.7;
+            transform: translateY(-0.2vh);
+         }
+         100% {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }
+   }
+}
+
+// タイトル下部のボーダーラインのフェードイン
+.border-fadein {
+   & .observe-border.inview {
+      @include animation(
+         $name: border-run,
+         $duration: 1.2s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards
+      );
+      @keyframes border-run {
+         0% {
+         opacity: 0;
+         transform: scale(0, 1);
+         }
+         100% {
+         opacity: 1;
+         transform: scale(1, 1);
+         }
+      }
+   }
+}
+
+// アイコンが跳ねて飛び出すフェードイン
+.icon-jump {
+   & .observe-icon.inview {
+      @include animation(
+         $name: icon-jump,
+         $duration: 0.5s,
+         $timing-function: ease-in-out,
+         $fill-mode: forwards
+      );
+      @keyframes icon-jump {
+            0% {
+               opacity: 0;
+               transform: translateY(3vh);
+            }
+            50% {
+               opacity: 0.5;
+               transform: translateY(-7vh);
+            }
+            70% {
+            opacity: 0.7;
+            transform: translateY(1vh);
+            }
+            90% {
+            opacity: 0.9;
+            transform: translateY(-0.5vh);
+            }
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+            }
+      }
+      @for $i from 1 through 6 {
+         &:nth-child(#{$i}) {
+               animation-delay: $i * 0.13s;
+         }
+      }
+   }
+}
+
+// ページ最下部のトップへもどるボタンのフェードアニメーション
+.back-to-top {
+   & .footer.inview {
+      & .to-top {
+         @include animation(
+            $name: to-top,
+            $duration: 1.7s,
+            $timing-function: ease-in-out,
+            $iteration-count: infinite
+         );
+         @keyframes to-top {
+               0% {
+                  opacity: 0.1;
+                  transform: translateY(0);
+                  
+               }
+               45% {
+                  opacity: 0.9;
+                  transform: translateY(-3.7vh);
+               }
+               50% {
+                  opacity: 1;
+                  transform: translateY(-4vh);
+               }
+               55% {
+                  opacity: 0.9;
+                  transform: translateY(-3.7vh);
+               }
+               100% {
+                  opacity: 0.1;
+                  transform: translateY(0vh);
+                  
+               }
+         }    
+      }
+   }
+}
+
+
+// 要素がフェードインしてくる前は、予めすべて透明化しておく
+.observe-txt,
+.observe-border,
+.observe-gen,
+.observe-copy,
+.observe-icon {
+   opacity: 0;
+}

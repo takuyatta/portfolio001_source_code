@@ -1,0 +1,78 @@
+// Retinaディスプレイでの閲覧の場合のスタイル調整
+
+h1 {
+  font-size: 10rem;
+}
+h2 {
+  font-size: 7rem;
+}
+h3 {
+  font-size: 5rem;
+}
+p {
+  font-size: 4rem;
+}
+.btn {
+  font-size: 4rem;
+}
+.logo-text {
+  font-size: 4rem;
+}
+.icon-size {
+  font-size: 4.5rem;
+}
+.font-sm {
+  font-size: 3rem;
+}
+
+.menu-icon{
+  padding-left: 70px;
+}
+.content-width {
+  max-width: 1800px;
+}
+
+.vaccine {
+ &__img {
+   margin: 50px 0;
+    &::after {
+      bottom: 0;
+    }
+ }
+  &__sub {
+    top: 40%;
+    & h2 {
+      padding-bottom: 20rem;
+    }
+     &__btn {
+        width: 50rem;
+        height: 10rem;
+     }
+  }
+}
+
+.habit__sub__btn {
+  max-width: 22rem;
+  height: 61px;
+}
+
+.contact {
+  &__btn {
+    padding: 3vw 0;
+    & .btn {
+      height: 70px;
+    }
+}
+}
+
+
+.under {
+  & .under__img {
+    height: 80vw;
+  }
+  &__title {
+    top: 61%;
+    left: 51vw;
+  }
+}
+

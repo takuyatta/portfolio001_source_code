@@ -1,0 +1,63 @@
+ // ビューポートの幅が1020px以上1219px以下の場合のスタイル調整
+ 
+ .pt-sm {
+   padding-top: 40px !important;
+ }
+ .pb-sm {
+   padding-bottom: 40px !important;
+ }
+ .mb-sm {
+   margin-bottom: 40px !important;
+ }
+
+ .black-film {
+   vertical-align: bottom;
+ }
+ 
+ .hero__title {
+    &.pt1 {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+    &.pt2 {
+      opacity: 0;
+      visibility: visible;
+   }
+ }
+
+ .vaccine {
+   &__sub {
+      &-pt1 {
+         display: none;
+      }
+      &-pt2 {
+         display: block;
+      }
+   }
+ }
+
+.icons{
+   &__items {
+      padding: 85px 20px;
+   }
+   &__item {     
+      width: 10%;
+      padding: 2vh;
+   }
+}
+
+.habit {
+   &__item {     
+      width: 33%;
+
+   }
+   &__sub {
+      top: 17%;
+   }
+}
+
+.under {
+    height: 60vw;
+    overflow: hidden;
+}

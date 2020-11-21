@@ -1,0 +1,48 @@
+ // ビューポートの幅が630px以上859px以下の場合のスタイル調整
+
+ .mobile-menu__btn {
+   display: none;
+ }
+
+ .header {
+   &__menu {
+      display: block;
+   }
+ }
+
+ .menu-icon{
+   padding-left: 3.6vw;
+ }
+
+ .icons{
+   &__items {
+      padding: 35px 0px;
+   }
+   &__item {     
+      width: 23%;
+   }
+}
+
+.habit {
+   &__items {
+      flex-direction: row;
+      padding-bottom: 4vw; 
+   }
+   &__item {     
+      width: 50%;
+      padding: 0;
+      &::after {
+         bottom: 0;
+      }
+   }
+}
+
+
+.under {
+   &__img {
+      height: 95vw;
+   }
+   &::after {
+      height: 95vw;
+   }
+}

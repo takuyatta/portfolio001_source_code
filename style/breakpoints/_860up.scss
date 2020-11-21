@@ -1,0 +1,45 @@
+ // ビューポートの幅が860px以上1019px以下の場合のスタイル調整
+ 
+.font-sm {
+   font-size: calc(1.5rem + ((1vw - 0.86rem) * 1.7647));
+}
+
+.icons{
+   &__items {
+      padding: 55px 0px;
+   }
+   &__item {     
+      width: 18%;
+   }
+}
+
+.under {
+   object-position: 50% 10%;
+   &__img {
+      height: 85vw;
+   }
+   &::after {
+      height: 85vw;
+   }
+   &__title {
+      top: 45%;
+      left: 55vw;
+   }
+}
+
+.footer {
+  &__description {
+     padding-top: 100px;
+    flex-direction: row; 
+   }
+   &__left,
+   &__right {
+    font-size: 15px;
+    width: 50%;
+   }
+}
+
+.to-top > img {
+   width: 5vw;
+}
+

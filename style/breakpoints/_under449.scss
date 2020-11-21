@@ -1,0 +1,39 @@
+// ビューポートの幅が449px以下の場合のスタイル調整
+h1 {
+   font-size: 2.5rem;
+}
+h2 {
+   font-size: 1.8rem;
+}
+h3 {
+   font-size: 1.7rem;
+}
+
+p {
+   font-size: 1.7rem;
+}
+.btn {
+   font-size: 1.5rem;
+}
+.logo-text {
+   font-size: 1.2rem;
+}
+.font-sm {
+   font-size: 1.1rem;
+}
+
+.vaccine {
+   &__sub {
+      & h2 {
+         padding-bottom: 2rem;
+      }
+      &__btn {
+         width: 16rem;
+      }
+   }
+ }
+ 
+.under__title{
+   top: 55%;
+   left: 30vw;
+}

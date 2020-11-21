@@ -1,0 +1,39 @@
+// 各オブジェクト形状のデフォルト設定
+
+// クリックボタンの形状・ホバー / クリックアクションのデフォルト設定
+.btn {
+   font-size: calc(1.7rem + ((1vw - 0.45rem) * 1.0667));
+   border: 1px solid $cBgGray;
+   background-color: $cCover;
+   color: $cWhite;
+   width: calc(14rem + ((1vw - 0.45rem) * 21.3333));
+   height: 40px;
+   transition: box-shadow 0.3s ease 0s;
+}
+.btn-hover {
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+   color: $cBlack;
+   font-weight: 700;
+   background-color: $cWhite;
+
+}
+.btn-active {
+   transform: translateY(0.5vh);
+}
+
+
+
+// 画像に被せる黒い半透明の幕のスタイル
+.black-film {
+   content: '';
+   position: absolute;
+   z-index: 10;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: 0;
+   padding: 0;
+   vertical-align: bottom;
+   background-color: $cCover;
+}

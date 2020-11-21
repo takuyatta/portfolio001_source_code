@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portfolio_001 - Takuya KATO</title>
+   <meta name="decription" content="This site is a portfolio web page of TakuyaKATO.">
+   <link rel="icon" href="./images/fav.svg"> 
+   <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+   <link rel="stylesheet" href="./style/vendors/swiper-bundle.min.css">
+   <link rel="stylesheet" href="./style/vendors/chartist.min.css">
+   <link rel="stylesheet" href="./style/style.css">
+   <script src="./scripts/vendors/pace.js"></script>
+   <link rel="stylesheet" href="./style/loader.css">
+</head>
+<body>
+   <div id="global-container">
+      <div id="container">
+         <header class="header">
+            <div class="header__back-film"></div>
+            <div class="header__inner">
+               <div class="logo">
+                  <img class="logo__img" src="images/fav.svg" alt="ロゴ">
+                  <span class="logo__title">Fight Against COVID-19 Association</span>
+               </div>
+               <button class="mobile-menu__btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </button>
+              <div class="header__menu">
+                 <ui class="header__menu__icons">
+                     <li class="menu-icon"><i class="fab fa-facebook-square"></i></li>
+                     <li class="menu-icon"><i class="fab fa-twitter-square"></i></li>
+                     <li class="menu-icon"><i class="fas fa-headset"></i></li>
+                     <li class="menu-icon"><i class="fas fa-hospital"></i></li>
+                     <li class="menu-icon"><i class="fas fa-search"></i></li>
+                </ui>
+              </div>
+            </div>
+         </header>     
+         <div id="main-content">
+            <section class="top">
+               <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(./images/top01.jpg)">
+                        <h1 class="hero__title pt1">愛する人とともに<br/>過ごすために</h1>
+                        <h1 class="hero__title pt2">愛する人とともに過ごすために</h1>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(./images/top02.jpg)">
+                        <h1 class="hero__title pt1">愛する人を<br/>なくさないように</h1>
+                        <h1 class="hero__title pt2">愛する人をなくさないように</h1>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(./images/top03.jpg)">
+                        <h1 class="hero__title pt1">愛する人の<br/>未来のために</h1>
+                        <h1 class="hero__title pt2">愛する人の未来のために</h1>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(./images/top04.jpg)">
+                        <h1 class="hero__title pt1">街ゆく人の<br/>笑顔のために</h1>
+                        <h1 class="hero__title pt2">街ゆく人の笑顔のために</h1>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(./images/top05.jpg)">
+                        <h1 class="hero__title pt1">いまをともに<br/>戦い抜こう</h1>
+                        <h1 class="hero__title pt2">いまをともに戦い抜こう</h1>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination swiper-pagination-white"></div>
+                </div>            
+            </section>
+            <section class="content">
+               <div class="chart">
+                  <div class="chart__inner">
+                     <div class="chart__title__area">
+                        <h2 class="chart__title observe-txt">これまでの感染者数の推移</h2>
+                        <div class="title-border observe-border"></div>
+                     </div>
+                     <div class="chart__graph">
+                        <div class="ct-chart ct-perfect-fourth observe-gen"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="vaccine">
+                  <div class="vaccine__inner">
+                     <div class="vaccine__title__area">
+                        <h2 class="vaccine__title observe-txt">ワクチンの普及状況</h2>
+                        <div class="title-border observe-border"></div>
+                     </div>
+                     <div class="vaccine__img">
+                        <img class="observe-gen" src="images/vac.jpg" alt="ワクチン開発の画像">
+                        <div class="vaccine__sub">
+                           <h2 class="vaccine__sub-pt1">ワクチンの普及までには<br/> まだ時間がかかります</h2>
+                           <h2 class="vaccine__sub-pt2">ワクチンの普及までには まだ時間がかかります</h2>
+                           <button class="vaccine__sub__btn btn">現在の普及状況</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="icons">
+                  <div class="icons__inner">
+                     <div class="icons__title__area">
+                        <h2 class="icons__title observe-txt">感染拡大の予防のために<br/>できること</h2>
+                        <div class="title-border observe-border"></div>
+                     </div>
+                     <div class="icons__items">
+                        <img class="icons__item observe-icon" src="images/icon01.svg" alt="予防策のアイコン">
+                        <img class="icons__item observe-icon" src="images/icon02.svg" alt="予防策のアイコン">
+                        <img class="icons__item observe-icon" src="images/icon03.svg" alt="予防策のアイコン">
+                        <img class="icons__item observe-icon" src="images/icon04.svg" alt="予防策のアイコン">
+                        <img class="icons__item observe-icon" src="images/icon05.svg" alt="予防策のアイコン">
+                        <img class="icons__item observe-icon" src="images/icon06.svg" alt="予防策のアイコン">
+                     </div>
+                  </div>
+               </div>
+               <div class="habit">
+                  <div class="habit__inner">
+                     <div class="habit__title__area">
+                        <h2 class="habit__title observe-txt">CHECK YOUR DAILY HABIT</h2>
+                        <div class="title-border observe-border"></div>
+                     </div>
+                     <div class="habit__items">
+                        <div class="habit__item hover-darken">
+                           <img class="habit__img" src="images/item01.jpg" alt="予防策のアイコン">
+                           <div class="habit__sub">
+                              <p>手はこまめに洗って</p>
+                              <button class="habit__sub__btn btn">詳しく→</button>
+                           </div>
+                        </div>
+                        <div class="habit__item hover-darken">
+                           <img class="habit__img" src="images/item02.jpg" alt="予防策のアイコン">
+                           <div class="habit__sub">
+                              <p>清潔なマスクを使用して</p>
+                              <button class="habit__sub__btn btn">詳しく→</button>
+                           </div>
+                        </div>
+                        <div class="habit__item hover-darken">
+                           <img class="habit__img" src="images/item03.jpg" alt="予防策のアイコン">
+                           <div class="habit__sub">
+                              <p>毎日体調を確認して</p>
+                              <button class="habit__sub__btn btn">詳しく→</button>
+                           </div>
+                        </div>
+                        <div class="habit__item hover-darken">
+                           <img class="habit__img" src="images/item04.jpg" alt="予防策のアイコン">
+                           <div class="habit__sub">
+                              <p>常に消毒を心掛けて</p>
+                              <button class="habit__sub__btn btn">詳しく→</button>
+                           </div>
+                        </div>
+                        <div class="habit__item hover-darken">
+                           <img class="habit__img" src="images/item05.jpg" alt="予防策のアイコン">
+                           <div class="habit__sub">
+                              <p>正しい距離を保って</p>
+                              <button class="habit__sub__btn btn">詳しく→</button>
+                           </div>
+                        </div>
+                        <div class="habit__item hover-darken">
+                           <img class="habit__img" src="images/item06.jpg" alt="予防策のアイコン">
+                           <div class="habit__sub">
+                              <p>マスクは正しく着用して</p>
+                              <button class="habit__sub__btn btn">詳しく→</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="contact">
+                  <div class="contact__inner">
+                     <div class="contact__title__area">
+                        <h2 class="contact__title observe-txt">COVID-19の予防情報に関する<br/>お問い合わせはこちらから</h2>
+                        <div class="title-border observe-border"></div>
+                     </div>
+                     <div class="contact__items">
+                        <ul class="contact__list observe-txt">
+                           <li><a><img src="images/tap.png" alt="タップしてください"><h3 class="contact__list__txt">  よくあるお問い合わせ一覧</h3></a>
+                              <ul>
+                                <li><a>Q： マスクは本当に感染予防の効果があるのですか。</a></li>
+                                <li><a>Q： 海外に渡航するには、現在どのような条件がありますか。</a></li>
+                                <li><a>Q： COVID-19のワクチンは、いつから接種できますか。</a></li>
+                                <li><a>Q： 検査で陽性反応が出たのですが、どうしたら良いですか。</a></li>
+                              </ul>
+                            </li>
+                        </ul>
+                        <div class="contact__forms">
+                           <div class="contact__forms__label observe-gen">
+                              <p>お名前</p>
+                              <input class="contact__forms__form" type="text" placeholder="お名前を入力してください。">
+                           </div>
+                           <div class="contact__forms__label observe-gen">
+                              <p>メールアドレス</p>
+                              <input class="contact__forms__form"  type="text" placeholder="メールアドレスを入力してください。">
+                           </div>
+                           <div class="contact__forms__label observe-gen">
+                              <p>お問い合わせ内容</p>
+                              <textarea name="area1" class="contact__forms__form wideForm"  placeholder="内容を入力してください。"></textarea>
+                           </div>
+                        </div>
+                        <div class="contact__btn">
+                           <input class="btn observe-gen" type="button" value="送信">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="under">
+            <img class="under__img observe-gen" src="./images/under.jpg" alt="空に浮くマスク">
+            <div class="under__inner">
+               <h2 class="under__title observe-copy">マスクから解放された<br/>生活を取り戻そう</h2>
+            </div>
+            </section>
+         </div>
+         <footer class="footer">
+            <div class="footer__inner">
+               <div class="logo">
+                  <img class="logo__img" src="images/fav.svg" alt="ロゴ">
+                  <span class="logo__title">Fight Against COVID-19 Association</span><br/>
+                  <p>https://www.fightcovid19.com</p>
+                  <p>fightcovid19@aso.com</p>
+                  <p>TEL: 123-4567</p>
+               </div>
+               <div class="footer__description">
+                  <div class="footer__left">
+                     <p class="font-sm">※ このページはカトウ タクヤのポートフォリオの一部です。</p><br/><br/>
+                     <p class="font-sm">ページ内記載の団体および内容は全て架空のものです。</p>
+                  </div>
+                  <div class="footer__right">
+                     <p class="font-sm">このページは以下のサイトに公開されている<br/>画像及びアイコンのフリー素材を利用しています。</p>
+                     <p class="font-sm">O-DAN / https://o-dan.net</p>
+                     <p class="font-sm">ICONFINDER / https://www.iconfinder.com/</p>
+                  </div>
+               </div>
+               <p class="copyright">© Takuya KATO 2020</p>
+            </div>
+            <div class="to-top">
+               <img src="images/toTop.png" alt="ロゴ">
+            </div>
+         </footer>
+      </div>
+      <nav class="mobile-menu swipe-area">
+         <div class="mobile-menu__logo">
+            <img class="logo__img" src="images/fav.svg" alt="ロゴ">
+            <span class="logo__title">F. A. C. A. 2020</span>
+         </div>
+         <ul class="mobile-menu__main">
+            <li class="mobile-menu__item">
+                  <a class="mobile-menu__link" href="#">
+                     <span class="menu-icon"><i class="fab fa-facebook-square"></i></span>
+                     <span class="sub-title">Facebookで<br/>フォロー</span>
+                  </a>
+            </li>
+            <li class="mobile-menu__item">
+                  <a class="mobile-menu__link" href="#">
+                     <span class="menu-icon"><i class="fab fa-twitter-square"></i></span>
+                     <span class="sub-title">Twitterで<br/>フォロー</span>
+                  </a>
+            </li>
+            <li class="mobile-menu__item">
+                  <a class="mobile-menu__link" href="#">
+                     <span class="menu-icon"><i class="fas fa-headset"></i></span>
+                     <span class="sub-title">コールセンター<br/>サービス</span>
+                  </a>
+            </li>
+            <li class="mobile-menu__item">
+               <a class="mobile-menu__link" href="#">
+                     <span class="menu-icon"><i class="fas fa-hospital"></i></span>
+                     <span class="sub-title">お近くの<br/>検査病院</span>
+               </a>
+            </li>
+            <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+                  <span class="menu-icon"><i class="fas fa-search"></i></span>
+                  <span class="sub-title">サイト内 検索</span>
+            </a>
+         </li>
+         </ul>
+         <div class="mobile-menu__item mobile-menu__arrow">
+            <img src="images/swipe-right.png" alt="右へスワイプ">
+            <p>Back to main page</p>
+         </div>
+      </nav>
+   </div>
+   <script src="./scripts/vendors/swiper-bundle.min.js"></script>
+   <script src="./scripts/libs/hero-slider.js"></script>
+   <script src="./scripts/libs/fadein-observe.js"></script>
+   <script src="./scripts/vendors/chartist.min.js"></script>
+   <script src="./scripts/vendors/mychart.js"></script>
+   <script src="./scripts/libs/detect-swipe.js"></script>
+   <script src="./scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+//   フォントサイズのデフォルト設定
+.mg-reset {
+   margin: 0;
+}
+h1 {
+   font-size: calc(3.1rem + ((1vw - 0.45rem) * 2.5333));
+   font-weight: 500;
+   @extend .mg-reset;
+}
+h2 {
+   font-size: calc(1.8rem + ((1vw - 0.45rem) * 2));
+   font-weight: 500;
+   @extend .mg-reset;
+}
+
+    // タイトルに添えるボーダーラインのサイズ
+.title-border {
+   width: 80%;
+   margin: 0 auto;
+   border-bottom: 2px solid $cBlack;
+}
+h3 {
+   font-size: calc(1.7rem + ((1vw - 0.45rem) * 1.7333));
+   @extend .mg-reset;
+}
+p {
+   font-size: calc(1.7rem + ((1vw - 0.45rem) * 1.0667));
+   @extend .mg-reset;
+}
+
+.logo-text {
+   font-size: calc(1.2rem + ((1vw - 0.28rem) * 1.6304));
+}
+
+.icon-size {
+   font-size: calc(2rem + ((1vw - 0.63rem) * 1.7544));
+}
+
+.font-sm {
+   font-size: calc(1.1rem + ((1vw - 0.45rem) * 2.5333));
+}
+
+
+//  余白のデフォルト設定
+ .pt-sm {
+   padding-top: 20px;
+ }
+ .pt-lg {
+   padding-top: 60px;
+ }
+ .pb-sm {
+   padding-bottom: 20px;
+ }
+ .pb-lg { 
+   padding-bottom: 60px;
+ }
+ .mb-sm {
+   margin-bottom: 20px;
+ }
+ .mb-lg { 
+   margin-bottom: 60px;
+ }
+
+ // ページの大枠のコンテナののデフォルト設定
+ .content-width {
+   width: 100%;
+   margin: 0 auto;
+   max-width: $contentMaxWidth;
+ }
+
+ .inner {
+   @extend .pt-lg;     
+   text-align: center;
+ }
+
+ .inner-height {
+   height: auto;
+ }
+
+ .img {
+   max-width: 100%;
+ }
+
+
+ // タイトル・キャッチコピーに使用するフォントのデフォルト設定
+ .main-title {
+   color: $cWhite;
+   font-weight: 600;
+ }
+
+ .title {
+   @extend .pb-sm;
+   font-weight: 600;
+   margin: 0 auto;
+   width: 80%;
+ }
+
+ .title-sm {
+   @extend .pb-sm;
+   font-weight: 600;
+   margin: 0 auto;
+   width: 90%;
+ }
+
+ .sub-title {
+   color: $cBlack;
+ }
