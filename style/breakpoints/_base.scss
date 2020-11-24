@@ -312,7 +312,6 @@ body {
    }
    &__forms {
       width: 100%;
-      padding-top: 13vh;
       @extend .general-fadeIn;
       &__label{
          @extend .pt-sm;
@@ -340,7 +339,6 @@ body {
       padding: 70px 0;
       width: 100%;
       & .btn{
-         // width: 200px;
          height: 50px;
          &:hover {
             @extend .btn-hover;
@@ -357,7 +355,6 @@ body {
    list-style-type: none;
    margin: 0 auto;
    padding: 0;
-   position: absolute;
    top: 0;
    left: 0;
    right: 0;
